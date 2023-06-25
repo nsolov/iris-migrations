@@ -45,8 +45,10 @@ In the repository https://github.com/nsolov/iris-migrations/tree/master/src/Test
 Use the methods of the `NSolov.Migrations.MigrationService` class:
 
 `list()`: allows you to view all migrations and their status.
+
 `migrate()`: executes all pending migrations.
-`rollback()`: rolls back the last migration."
+
+`rollback()`: rolls back the last migration.
 
 Examples:
 
