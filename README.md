@@ -21,14 +21,14 @@ Class Test.FirstMigration Extends NSolov.Migration.AbstractMigration
 
 Method up() As %Status
 {
-set ^x = 123
-return $$$OK
+    set ^x = 123
+    return $$$OK
 }
 
 Method down() As %Status
 {
-kill ^x
-return $$$OK
+    kill ^x
+    return $$$OK
 }
 
 }
