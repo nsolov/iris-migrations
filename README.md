@@ -6,7 +6,7 @@ IRIS-migrations allows you to create scripts for modifying a database: changing 
 Each migration contains an "upgrade" script and can also contain a "downgrade" script that will be executed when rolling back the migration, reverting the database to its previous state.
 Migrations are executed in a strictly defined order (based on the date of the first migration's compilation).
 
-## Why do you need IRIS-migrations?
+## Why do you need IRIS-migrations
 The main purpose of IRIS-migrations is to use them in the project deployment process. Imagine you're working on a project that evolves over a long period of time. You regularly make code updates. You have the project locally, in a testing environment, pre-production, and production environments.
 If you need to modify not only the code but also the data in the database (e.g., add new values to a table), you create a migration that incorporates these changes and include the execution of migrations during deployment in each environment. Therefore, as soon as your code with the migration is deployed to the corresponding environment, it will be executed.
 
