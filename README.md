@@ -16,6 +16,7 @@ Implement the up() method in this class and, if necessary, the down() method. Th
 
 Example:
 
+
 ```
 
 Class Test.FirstMigration Extends NSolov.Migration.AbstractMigration
@@ -37,6 +38,7 @@ Method down() As %Status
 
 ```
 
+
 After the first compilation of the class, the DateCreate parameter will be automatically added to it.
 
 Congratulations, you've created a migration!
@@ -54,6 +56,7 @@ Use the methods of the `NSolov.Migrations.MigrationService` class:
 `rollback()`: rolls back the last migration.
 
 Examples:
+
 
 ```
 
@@ -77,6 +80,7 @@ up : Test.FirstMigration
 down : Test.TableMigration
 
 ```
+
 
 Now add the call `do ##class(NSolov.Migrations.MigrationService).migrate()` in your deployment script, so that it is invoked when new code is deployed and the database is ready.
 IRIS-migrations stores information about executed migrations in the global ^migrations. This global shouldn't be deleted. If it is deleted, the migrations will be executed again.
