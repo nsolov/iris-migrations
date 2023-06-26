@@ -15,7 +15,9 @@ Create a class and specify `NSolov.Migration.AbstractMigration` as the base clas
 Implement the up() method in this class and, if necessary, the down() method. These methods must return a status.
 
 Example:
+
 ```
+
 Class Test.FirstMigration Extends NSolov.Migration.AbstractMigration
 {
 
@@ -32,6 +34,7 @@ Method down() As %Status
 }
 
 }
+
 ```
 
 After the first compilation of the class, the DateCreate parameter will be automatically added to it.
@@ -53,6 +56,7 @@ Use the methods of the `NSolov.Migrations.MigrationService` class:
 Examples:
 
 ```
+
 USER>do ##class(NSolov.Migrations.MigrationService).list()
 new : Test.FirstMigration
 new : Test.TableMigration
@@ -71,6 +75,7 @@ down : Test.TableMigration ... done
 USER>do ##class(NSolov.Migrations.MigrationService).list()
 up : Test.FirstMigration
 down : Test.TableMigration
+
 ```
 
 Now add the call `do ##class(NSolov.Migrations.MigrationService).migrate()` in your deployment script, so that it is invoked when new code is deployed and the database is ready.
