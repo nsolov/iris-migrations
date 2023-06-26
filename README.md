@@ -15,8 +15,6 @@ Create a class and specify `NSolov.Migration.AbstractMigration` as the base clas
 Implement the up() method in this class and, if necessary, the down() method. These methods must return a status.
 
 Example:
-
-
 ```
 
 Class Test.FirstMigration Extends NSolov.Migration.AbstractMigration
@@ -36,8 +34,8 @@ Method down() As %Status
 
 }
 
-```
 
+```
 
 After the first compilation of the class, the DateCreate parameter will be automatically added to it.
 
