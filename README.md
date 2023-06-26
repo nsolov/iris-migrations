@@ -31,10 +31,7 @@ Method down() As %Status
     kill ^x
     return $$$OK
 }
-
 }
-
-
 ```
 
 After the first compilation of the class, the DateCreate parameter will be automatically added to it.
